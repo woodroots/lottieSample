@@ -110,6 +110,7 @@ var app = new Vue({
 
         },
         submitinit() {
+            var vm = this;
             var submit = bodymovin.loadAnimation({
                 container: document.querySelector('.submitLoading'),
                 path: 'https://assets10.lottiefiles.com/datafiles/aba45c7b75d547282b2dbdc97969412b/progress_bar.json',
@@ -117,7 +118,7 @@ var app = new Vue({
                 loop: true,
                 autoplay: true
             });
-            var submitFinish = bodymovin.loadAnimation({
+            vm.submitFinish = bodymovin.loadAnimation({
                 container: document.querySelector('.submitFinish'),
                 path: 'https://assets6.lottiefiles.com/datafiles/xagAVK6Z2hhaURL/data.json',
                 renderer: 'svg',
@@ -125,12 +126,15 @@ var app = new Vue({
                 autoplay: false
             });
 
+
         },
         submit() {
             var vm = this;
             vm.submitDone = 'loading';
             setTimeout(function () {
                 vm.submitDone = 'done';
+                vm.submitFinish.play();
+
             }, 5000);
 
         }
