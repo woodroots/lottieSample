@@ -97,7 +97,7 @@ var app = new Vue({
                 container: document.querySelector('.search'),
                 path: 'https://assets7.lottiefiles.com/datafiles/k8dQgGd6PgypQ3N/data.json',
                 renderer: 'svg',
-                loop: false,
+                loop: true,
                 autoplay: false
             });
             var form = document.getElementById('search');
