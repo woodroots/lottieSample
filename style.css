@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.valid {
+    width: 50px;
+    height: 50px;
+}
+
+#search {
+    padding-right: 120px;
+}
+
+.search {
+    position: absolute;
+    right: 20px;
+    top: 38px;
+    width: 100px;
+}
+
+.submitLoading,
+.submitFinish {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.submitFinish {
+    width: 100px;
+    height: 100px;
+}
